@@ -208,46 +208,6 @@ button { font: inherit; color: inherit; }
 .meter-txt { margin-top: 16px; color: var(--muted); font-weight: 600; min-height: 3.2em; }
 .meter-txt b { color: var(--sun); }
 
-/* ——— Produto ——— */
-.s-prod { background: var(--t-plum); overflow: hidden; }
-.prod-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-.hbox { position: relative; overflow: hidden; margin-top: 28px; padding: 30px; border-radius: 20px; background: var(--night3); }
-.hbox::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--grad-sun); }
-.hbox::after { content: "9"; position: absolute; right: 12px; bottom: -28px; font: 400 9rem/1 var(--f-display); color: rgba(221,191,125,.1); pointer-events: none; }
-.hbox h3 { font-size: 1.5rem; margin-bottom: 8px; }
-.hbox p { color: var(--muted); position: relative; z-index: 1; }
-.mlist { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 18px; }
-.mlist li { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; }
-.mlist .n { font: 400 1.5rem/1.1 var(--f-display); color: var(--sun); min-width: 34px; }
-.mlist b { display: block; font-weight: 800; }
-.mlist span { color: var(--muted); font-size: .92rem; }
-
-/* Mockup de player/notebook */
-.device { position: relative; }
-.laptop { position: relative; border-radius: 22px; padding: 12px; background: linear-gradient(160deg, var(--night4), var(--t-deep)); border: 1px solid var(--line2);
-  box-shadow: var(--shadow-card), 0 0 80px rgba(221,191,125,.15); transform: rotate(2deg); transition: transform .5s var(--ease-spring); }
-@media (hover: hover) { .laptop:hover { transform: rotate(0) scale(1.02); } }
-.screen { border-radius: 14px; overflow: hidden; background: var(--t-deep); }
-.player { position: relative; aspect-ratio: 16/9; background: var(--grad-sun); display: grid; place-items: center; }
-.player::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(7,42,33,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(7,42,33,.08) 1px, transparent 1px); background-size: 24px 24px; }
-.player .pbtn { position: relative; z-index: 1; width: 64px; height: 64px; border-radius: 50%; background: var(--on-bright); color: var(--sun); display: grid; place-items: center; box-shadow: 0 10px 30px rgba(7,42,33,.4); }
-.player .pbtn svg { width: 22px; height: 22px; margin-left: 3px; }
-.player .ptitle { position: absolute; z-index: 1; left: 14px; bottom: 12px; color: var(--on-bright); font: 400 1.1rem/1 var(--f-display); letter-spacing: 1px; text-transform: uppercase; }
-.player .ptime { position: absolute; z-index: 1; right: 14px; bottom: 12px; color: var(--on-bright); font-size: .72rem; font-weight: 800; }
-.lessons { padding: 10px; display: grid; gap: 6px; }
-.lesson { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 12px; background: rgba(251,251,249,.05); font-size: .82rem; }
-.lesson.on { background: rgba(221,191,125,.14); border: 1px solid rgba(221,191,125,.35); }
-.lesson .ic { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: var(--night3); color: var(--muted); }
-.lesson.done .ic { background: var(--lime); color: var(--on-bright); }
-.lesson.on .ic { background: var(--sun); color: var(--on-bright); }
-.lesson .ic svg { width: 12px; height: 12px; }
-.lesson b { font-weight: 700; }
-.lesson em { font-style: normal; color: var(--muted2); font-size: .74rem; font-variant-numeric: tabular-nums; }
-.seal { position: absolute; top: -40px; left: -36px; z-index: 3; width: 118px; height: 118px; border-radius: 50%; background: var(--lime); color: var(--on-bright);
-  display: grid; place-items: center; text-align: center; transform: rotate(-12deg); box-shadow: 0 14px 40px rgba(168,214,91,.35); animation: spin 18s linear infinite; }
-.seal span { font: 400 1.05rem/1 var(--f-display); text-transform: uppercase; letter-spacing: .5px; }
-.seal small { display: block; font: 800 .55rem var(--f-body); letter-spacing: 2px; margin-top: 4px; }
-
 /* ——— Comparativo ——— */
 .s-tf { background: radial-gradient(40% 60% at 10% 50%, rgba(221,191,125,.12), transparent 70%), radial-gradient(40% 60% at 90% 50%, rgba(168,214,91,.10), transparent 70%), var(--night); }
 .tf { max-width: 1160px; margin: 48px auto 0; display: grid; grid-template-columns: 1fr auto 1fr; gap: 28px; align-items: stretch; }
@@ -396,8 +356,6 @@ footer p + p { margin-top: 6px; }
 @media (max-width: 768px) {
   .sec { padding: 72px var(--gutter); }
   .hero { padding-top: 56px; }
-  .prod-grid { grid-template-columns: 1fr; gap: 64px; }
-  .seal { left: auto; right: -6px; top: -50px; width: 96px; height: 96px; }
   .tf { grid-template-columns: 1fr; gap: 20px; }
   .vs { width: 100%; height: 60px; }
   .vs::before { top: 50%; bottom: auto; left: 0; right: 0; width: auto; height: 2px; transform: translateY(-50%); background: linear-gradient(90deg, var(--pink), var(--lime)); }
@@ -416,7 +374,6 @@ footer p + p { margin-top: 6px; }
   .price .num { font-size: 5.6rem; }
   .price-in { padding: 36px 20px 26px; }
   .panel { padding: 30px 20px; }
-  .hbox { padding: 24px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -530,54 +487,6 @@ footer p + p { margin-top: 6px; }
   </div>
 </section>
 
-<!-- ═══════════ PRODUTO ═══════════ -->
-<section class="sec s-prod">
-  <div class="wrap prod-grid">
-    <div>
-      <span class="label">O curso</span>
-      <h2 class="h2 rv">Não é um PDF. <span class="hl">É aula por aula,</span> do meu lado.</h2>
-      <p class="lead rv">Você assiste, aplica e avança. Cada módulo é curto, direto e feito para caber na sua rotina — <strong>no celular, no computador ou na TV</strong>.</p>
-
-      <div class="hbox rv">
-        <h3>9 módulos em vídeo</h3>
-        <p>Explicações em vídeo, demonstrações na cozinha e protocolos prontos para você seguir sem dúvida. Assista quantas vezes quiser.</p>
-      </div>
-
-      <ul class="mlist">
-        <li class="rv"><span class="n">01</span><div><b>COMECE POR AQUI</b><span>Comece por aqui · 1 Aula</span></div></li>
-        <li class="rv"><span class="n">02</span><div><b>O QUE É O JEJUM INTERMITENTE?</b><span>O que é o jejum intermitente? · 1 Aula</span></div></li>
-        <li class="rv"><span class="n">03</span><div><b>PORQUE O JEJUM FUNCIONA</b><span>Porque o jejum funciona · 1 Aula</span></div></li>
-        <li class="rv"><span class="n">04</span><div><b>TIPOS DE JEJUM</b><span>TIPOS DE JEJUM · 1 Aula</span></div></li>
-        <li class="rv"><span class="n">05</span><div><b>RITUAL MATINAL</b><span>Ritual Matinal · 1 Aula</span></div></li>
-        <li class="rv"><span class="n">06</span><div><b>O QUE QUEBRA O JEJUM</b><span>O que quebra e não quebra o Jejum · 2 Aulas</span></div></li>
-        <li class="rv"><span class="n">07</span><div><b>COMO QUEBRAR O JEJUM</b><span>Como quebrar o Jejum · 1 Aula</span></div></li>
-        <li class="rv"><span class="n">08</span><div><b>ERROS COMUNS</b><span>Erros Comuns · 1 Aula</span></div></li>
-        <li class="rv"><span class="n">09</span><div><b>ESTILO DE VIDA</b><span>Estilo de vida com Jejum · 1 Aula</span></div></li>
-      </ul>
-    </div>
-
-    <div class="device rv">
-      <div class="seal"><div><span>9 módulos</span><small>em vídeo</small></div></div>
-      <div class="laptop">
-        <div class="screen">
-          <div class="player">
-            <div class="pbtn"><svg><use href="#i-play"/></svg></div>
-            <span class="ptitle">Módulo 3 · PORQUE O JEJUM FUNCIONA</span>
-            <span class="ptime">04:12 / 09:30</span>
-          </div>
-          <div class="lessons">
-            <div class="lesson done"><span class="ic"><svg><use href="#i-check"/></svg></span><b>01 · Comece por aqui</b><em>1 Aula</em></div>
-            <div class="lesson done"><span class="ic"><svg><use href="#i-check"/></svg></span><b>02 · O que é o jejum intermitente?</b><em>1 Aula</em></div>
-            <div class="lesson on"><span class="ic"><svg><use href="#i-play"/></svg></span><b>03 · Porque o jejum funciona</b><em>1 Aula</em></div>
-            <div class="lesson"><span class="ic"><svg><use href="#i-lock"/></svg></span><b>04 · TIPOS DE JEJUM</b><em>1 Aula</em></div>
-            <div class="lesson"><span class="ic"><svg><use href="#i-lock"/></svg></span><b>05 · Ritual Matinal</b><em>1 Aula</em></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════ COMPARATIVO ═══════════ -->
 <section class="sec s-tf">
   <div class="wrap center">
@@ -636,13 +545,13 @@ footer p + p { margin-top: 6px; }
 
       <ul class="feat">
         <li><span class="ic"><svg><use href="#i-check"/></svg></span>9 módulos · 10 videoaulas<s>R$ 497</s></li>
-        <li><span class="ic"><svg><use href="#i-check"/></svg></span>Bônus: aulas de receitas anti-inflamatórias<s>R$ 147</s></li>
-        <li><span class="ic"><svg><use href="#i-check"/></svg></span>Bônus: cronograma de 30 dias<s>R$ 97</s></li>
-        <li><span class="ic"><svg><use href="#i-check"/></svg></span>Bônus: aula ao vivo de tira-dúvidas gravada<s>R$ 197</s></li>
+        <li><span class="ic"><svg><use href="#i-check"/></svg></span>Bônus: Receitas Ancestrais<s></s></li>
+        <li><span class="ic"><svg><use href="#i-check"/></svg></span>Bônus: Receitas de Doces<s></s></li>
+        <li><span class="ic"><svg><use href="#i-check"/></svg></span>Bônus: Planilha de treinos personalizados<s></s></li>
+        <li><span class="ic"><svg><use href="#i-check"/></svg></span>Bônus: Acesso à Comunidade Jejum na Prática<s></s></li>
         <li><span class="ic"><svg><use href="#i-check"/></svg></span>Acesso por 1 ano, em qualquer aparelho<s></s></li>
       </ul>
 
-      <p class="from">De <s>R$ 938</s> por apenas</p>
       <div class="price"><span class="rs">R$</span><span class="num">297</span><span class="cents">,00</span></div>
       <p class="inst">ou em até <b>12x no cartão</b> · também no Pix</p>
 
